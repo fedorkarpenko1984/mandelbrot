@@ -1,0 +1,101 @@
+*, body, html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #e0e0e0;
+}
+
+canvas {
+  box-shadow: 0 0 20px 5px #ccc;
+}
+.info {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-family: monospace;
+  gap: 10px;
+}
+.x-coord {
+  color: rgb(63, 148, 54);
+}
+.y-coord {
+  color: rgb(255, 115, 0);
+}
+.cursor-x-coord {
+  color: rgb(63, 148, 54);
+}
+.cursor-y-coord {
+  color: rgb(255, 115, 0);
+}
+.loader {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+p {
+  width: 600px;
+  max-width: 90px;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    height: 100px;
+  }
+  50% {
+    height: 20px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 100px;
+  }
+}
+
+.modal, .message {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  right: 50%;
+  background: rgba(255, 255, 255, .8);
+  padding: 20px;
+  width: 300px;
+  font-family: monospace;
+  font-size: 20px;
+  border-radius: 20px;
+  z-index: 1;
+  text-align: center;
+}
+.modal .close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #444;
+  cursor: pointer;
+}
+.message {
+  z-index: 5;
+  display: none;
+}

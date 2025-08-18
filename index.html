@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./icon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Мандельбротность</title>
+</head>
+<body>
+    <canvas width="1601" height="801"></canvas>
+    <div class="info">
+      <div class="coords">
+        Координаты центра: 
+        <span class="x-coord"></span>
+        <span class="y-coord"></span>
+      </div>
+      <div class="cursor-coords">
+        Координаты курсора:
+        <span class="cursor-x-coord"></span>
+        <span class="cursor-y-coord"></span>
+      </div>
+    </div>
+    <div class="loader">
+      <img src="./loader.gif" alt="">
+      <p>Подождите, идёт генерация</p>
+    </div>
+    <div class="modal">
+      Добро пожаловать!<br>
+      Левая кнопка мыши - приблизить,
+      правая кнопка мыши - отдалить!<br>
+      Приятного просмотра)
+      <div class="close"></div>
+    </div>
+    <div class="message">Дальнейшее приближение невозможно по техническим причинам</div>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
